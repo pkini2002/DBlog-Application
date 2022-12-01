@@ -1,0 +1,12 @@
+.env
+env/
+db.sqlite3
+blog/__pycache__/
+blog/migrations/__pycache__/
+DBlog/__pycache__/
+media/
+staticfiles/
+*.log
+*.pot
+*.pyc
+__pycache__
