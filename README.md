@@ -14,7 +14,7 @@
    - Clone the repo to your local system
    ```git
    git clone https://github.com/pkini2002/DBlog-Application.git
-   cd DBlog
+   cd DBlog-Application
    ```
    Make sure you have python installed on your system.
 2. Create a Virtual Environment for the Project
@@ -27,7 +27,7 @@
    **For Windows Users**
    ```bash
    virtualenv env
-   env\Scripts\activate
+   env/Scripts/activate
    ```
 
 
