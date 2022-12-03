@@ -9,6 +9,12 @@
     <br/>
 <h1>Posts</h1>
 {{post.title}} | {{post.title_tag}}
+<br>
+<small>
+    <a href="{% url 'update_post' post.pk %}">Edit</a>
+    <br/>
+    <a href="{% url 'delete_post' post.pk %}">Delete</a>
+</small>
 <hr>
 {{ post.body }}
 </div>
