@@ -11,9 +11,14 @@
 {{ post.title }} </a> - {{ post.author }}
 <br>
 {{post.author.first_name}} | {{post.author.last_name}}
+<small>
 <a href="{% url 'update_post' post.pk %}">Edit</a>
+<br/>
+<a href="{% url 'delete_post' post.pk %}">Delete</a>
+</small>
 <br>
 {{ post.body }}
+<br><br>
 </li>
 {% endfor %}
 </ul>
