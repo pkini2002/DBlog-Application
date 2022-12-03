@@ -1,10 +1,15 @@
-<h1>Article details</h1>
+{% extends 'base.html' %}
 
-<h1>{{ post.title }}</h1>
-<small>
-    By: {{ post.author.first_name }}
-        {{ post.author.last_name }}
-</small>
-<br>
+{% block title %}
+    {{post.title_tag}}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <br/>
+<h1>Posts</h1>
+{{post.title}} | {{post.title_tag}}
 <hr>
 {{ post.body }}
+</div>
+{% endblock %}
