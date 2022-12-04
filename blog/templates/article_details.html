@@ -16,6 +16,14 @@
     <a href="{% url 'delete_post' post.pk %}">Delete</a>
 </small>
 <hr>
-{{ post.body }}
+{{ post.body|safe }}
+<br><br>
+<button class="btn btn-primary">
+    <a href="{% url 'home' %}" style="text-decoration:none;color: white;">
+        Back
+    </a>
+</button>
 </div>
+
+
 {% endblock %}
