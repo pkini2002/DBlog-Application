@@ -13,3 +13,50 @@
     overflow-y: hidden;
     padding-top: 30px;
 }
+
+.subtext{
+    color: #fff;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.inline{
+    display: flex;
+}
+
+.category{
+    padding-right:10px;
+    margin-right: 100px;
+}
+
+.pencil-icon{
+    margin-right: 50px;
+    color: #1e3c72;
+}
+
+.delete-icon{
+    color: #1e3c72;
+}
+
+.blog-container{
+    padding: 50px;
+}
+
+.post-title{
+    color: #1e3c72;
+}
+
+.post-author{
+    color: #1e3c72;
+    font-weight: 500;
+}
+
+.button-submit{
+    background-color: #1e3c72;
+    color: #fff;
+}

@@ -14,20 +14,21 @@
 <h1 class="heading-post">
     Welcome {{ user.first_name }}!
 </h1>
-<p></p>
+<p class="subtext">Here are some blogs suggested for you!!</p>
 </section>
 
+<br/><br/>
 {% for post in object_list %}
- <div class="container container-fluid">
+ <div class="container container-fluid blog-container shadow-lg rounded">
 
-    <a href="{% url 'article-detail' post.pk %}">
+    <a href="{% url 'article-detail' post.pk %}" class="link">
         <h3 class="post-title">{{post.title}}</h3>
     </a>
 
-        <small class="post-author">-{{post.author}}</small>
-       <strong class="name">{{post.author.first_name}} | {{post.author.last_name}}</strong>
-        <span>
+        <small class="post-author">-Posted by {{post.author}}</small>
+        <br/><br/>
 
+        <span class="inline">
         <!-- Category -->
         <a href="{% url 'category' post.category %}">
         <span class="badge text-bg-primary category">
@@ -43,8 +44,14 @@
         </span>
         <hr>
         <section class="post-body">
-            {{ post.body|slice:":200"|safe }}
+            {{ post.body|slice:":500"|safe }}
         </section>
+        <br/>
+        <button type="submit" class="button-submit rounded-5 p-2" style="border-color:#fff;">
+            <a href="{% url 'article-detail' post.pk %}" style="color:#fff;text-decoration:none;">
+                Read More
+            </a>
+        </button>
  </div>
  <br><br><br>
 {% endfor %}

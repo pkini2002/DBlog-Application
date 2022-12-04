@@ -1,7 +1,13 @@
 {% extends 'base.html' %}
+{% load static %} 
 
 {% block title %}
     Categories
+{% endblock %}
+
+{% block styles %}
+<!-- Replace {name} with the respective css file -->
+<link rel="stylesheet" href="{% static 'styles/categories.css' %}" />
 {% endblock %}
 
 {% block content %}
@@ -36,6 +42,29 @@
 </ul>
 
 {% else %}
-<h1>Sorry we couldnt find ur page!</h1>
+<section class="page_404">
+	<div class="container">
+		<div class="row">	
+		<div class="col-sm-12 ">
+		<div class="col-sm-10 col-sm-offset-1  text-center">
+		<div class="four_zero_four_bg">
+			<h1 class="text-center ">404</h1>
+		
+		
+		</div>
+		
+		<div class="contant_box_404">
+		<h3 class="h2">
+		 Sorry we couldn't find any blogs in the category you selected!
+		</h3>
+		
+		
+		<a href="{% url 'home' %}" class="link_404">Go to Home</a>
+	</div>
+		</div>
+		</div>
+		</div>
+	</div>
+</section>
 {% endif %}
 {% endblock %}

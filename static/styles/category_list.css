@@ -1,0 +1,15 @@
+.cat{
+    justify-content: center;
+    color:#1e3c72;
+    position: relative;
+    left: 250px;
+}
+
+.con{
+    padding: 50px;
+}
+
+.sec{
+   position: relative;
+   left: 220px;
+}

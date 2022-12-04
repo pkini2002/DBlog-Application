@@ -1,13 +1,29 @@
 {% extends 'base.html' %}
 
+{% load static %} 
+
+{% block styles %}
+<!-- Replace {name} with the respective css file -->
+<link rel="stylesheet" href="{% static 'styles/category_list.css' %}" />
+{% endblock %}
+
 {% block title %}
     Blog Categories
 {% endblock %}
 
 {% block content %}
-
+<br/><br/>
+<div class="container con shadow-lg" style="justify-content:center;">
+<h4 class="cat">Choose a category to filter the blogs!</h4>
+    <br/>
 {% for item in cat_menu_list %}
-<h4><a href="{% url 'category' item %}" class="dropdown-item">{{item}}</a></h4>
+<div class="sec">
+<button type="button" class="btn btn-success" style="width:50%;">
+    <a href="{% url 'category' item %}" class="dropdown-item">{{item}}</a>
+</button>
+</div>
+<br/>
 {% endfor %}
+</div>
 
 {% endblock %}
