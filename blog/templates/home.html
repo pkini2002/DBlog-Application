@@ -15,9 +15,17 @@
 <a href="{% url 'update_post' post.pk %}">Edit</a>
 <br/>
 <a href="{% url 'delete_post' post.pk %}">Delete</a>
+<br/>
 </small>
 <br>
+<strong>
+<a href="{% url 'category' post.category %}">
+    {{post.category}}
+</a>
+</strong>
+<hr>
 {{ post.body|slice:":200"|safe }}
+
 <br><br>
 </li>
 {% endfor %}

@@ -15,6 +15,7 @@
     <br/>
     <a href="{% url 'delete_post' post.pk %}">Delete</a>
 </small>
+<strong>{{post.category}}</strong>
 <hr>
 {{ post.body|safe }}
 <br><br>
