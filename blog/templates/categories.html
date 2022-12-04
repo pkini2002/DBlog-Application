@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
+
+{% block title %}
+    Categories
+{% endblock %}
+
 {% block content %}
 
-<div class="container">
-<h1>Post</h1>
+{% if category_posts %}
+<h1>{{cats}}</h1>
 
 <ul>
-{% for post in object_list %}
+    {% for post in category_posts %}
 <li>
 <a href="{% url 'article-detail' post.pk %}">
 {{ post.title }} </a> - {{ post.author }}
@@ -29,5 +34,8 @@
 </li>
 {% endfor %}
 </ul>
-</div>
+
+{% else %}
+<h1>Sorry we couldnt find ur page!</h1>
+{% endif %}
 {% endblock %}
