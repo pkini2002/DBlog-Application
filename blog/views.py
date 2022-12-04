@@ -16,8 +16,15 @@ class ArticleDetailView(DetailView):
 
 class AddPostView(CreateView):
     model = Post
-    # form_class = PostForm
+    form_class = PostForm
     template_name = 'add_post.html'
+    # fields = '__all__'
+    # field = ('author')
+
+class AddCategoryView(CreateView):
+    model = Category
+    # form_class = PostForm
+    template_name = 'add_category.html'
     fields = '__all__'
     # field = ('author')
 
