@@ -12,6 +12,7 @@ for item in choices:
 class PostForm(forms.ModelForm):
         title =forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control', 'placeholder':'Title'}))
         title_tag =forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control', 'placeholder':'Title tag'}))
+        author =forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control','placeholder':'username','id':'elder','type':'hidden','value':''}))
         category =forms.CharField(widget=forms.Select(choices=choice_list,attrs={ 'class' : 'form-control'}))
         body =forms.CharField(widget=forms.Textarea(attrs={ 'class' : 'form-control', 'placeholder':'Content'}))
         snippet =forms.CharField(widget=forms.Textarea(attrs={ 'class' : 'form-control', 'placeholder':'Content'}))

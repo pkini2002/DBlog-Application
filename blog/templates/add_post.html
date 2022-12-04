@@ -17,8 +17,14 @@
         </form>
     </div>
     </div>
-{% else %}
 
+    <!-- Javascript -->
+    <script>
+         var name="{{ user.first_name }}"
+         document.getElementById("elder").placeholder=name;
+    </script>
+
+{% else %}
     Login required to view
 {% endif %}
 {% endblock %}
