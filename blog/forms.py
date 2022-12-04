@@ -15,21 +15,23 @@ class PostForm(forms.ModelForm):
         author =forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control','placeholder':'username','id':'elder','type':'hidden','value':''}))
         category =forms.CharField(widget=forms.Select(choices=choice_list,attrs={ 'class' : 'form-control'}))
         body =forms.CharField(widget=forms.Textarea(attrs={ 'class' : 'form-control', 'placeholder':'Content'}))
+        snippet =forms.CharField(widget=forms.Textarea(attrs={ 'class' : 'form-control', 'placeholder':'Content'}))
        
     
         class Meta:
             model = Post
-            fields = ['title','title_tag','author','category','body'] 
+            fields = ('title','title_tag','author','category','body','snippet')
 
 class EditForm(forms.ModelForm):
     class Meta:
         model=Post
-        fields=('title','title_tag','body')
+        fields=('title','title_tag','body','snippet')
 
         widgets={
             'title':forms.TextInput(attrs={'class':'form-control'}),
             'title_tag':forms.TextInput(attrs={'class':'form-control'}),
-            'body':forms.Textarea(attrs={'class':'form-control'})
+            'body':forms.Textarea(attrs={'class':'form-control'}),
+            'snippet':forms.Textarea(attrs={'class':'form-control'})
         }
 
          
