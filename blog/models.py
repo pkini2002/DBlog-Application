@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 from datetime import date,datetime
+from ckeditor.fields import RichTextField
 import django.utils.timezone
 
 # Create your models here.
@@ -18,9 +19,11 @@ class Post(models.Model):
     title=models.CharField(max_length=255)
     title_tag=models.CharField(max_length=255,default="")
     author=models.ForeignKey(User,on_delete=models.CASCADE)
-    body=models.TextField()
+    body=RichTextField(blank=True,null=True)
+    #body=models.TextField()
     post_date=models.DateField(auto_now_add=True)
     category=models.CharField(max_length=255,default='coding')
+    snippet=models.CharField(max_length=255)
 
     def __str__(self):
         return self.title + " | " + str(self.author)
