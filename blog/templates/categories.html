@@ -10,7 +10,7 @@
 <h1>{{cats}}</h1>
 
 <ul>
-    {% for post in category_posts %}
+{% for post in category_posts %}
 <li>
 <a href="{% url 'article-detail' post.pk %}">
 {{ post.title }} </a> - {{ post.author }}

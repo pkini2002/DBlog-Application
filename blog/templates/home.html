@@ -24,7 +24,14 @@
 </a>
 
 <br>
+<strong>
+<a href="{% url 'category' post.category %}">
+    {{post.category}}
+</a>
+</strong>
+<hr>
 {{ post.body|slice:":200"|safe }}
+
 <br><br>
 </li>
 {% endfor %}
