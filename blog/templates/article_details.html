@@ -25,6 +25,12 @@ Post author : {{post.author.id}}
 </small>
 <strong>{{post.category}}</strong>
 <hr>
+
+{% if post.header_image  %}
+<img src="{{ post.header_image.url }}" alt="blog-img">
+{% endif %}
+<br/><br/>
+
 {{ post.body|safe }}
 <br><br>
 <button class="btn btn-primary">

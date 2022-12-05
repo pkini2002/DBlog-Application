@@ -10,18 +10,20 @@ for item in choices:
 
 
 class PostForm(forms.ModelForm):
-        title =forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control', 'placeholder':'Title'}))
-        title_tag =forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control', 'placeholder':'Title tag'}))
-        author =forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control','placeholder':'username','id':'elder','value':''}))
-        category =forms.CharField(widget=forms.Select(choices=choice_list,attrs={ 'class' : 'form-control'}))
-        body =forms.CharField(widget=forms.Textarea(attrs={ 'class' : 'form-control', 'placeholder':'Content'}))
-        snippet =forms.CharField(widget=forms.Textarea(attrs={ 'class' : 'form-control', 'placeholder':'Content'}))
+    class Meta:
+        model = Post
+        fields = ('title','title_tag','author','category','body','snippet','header_image')
+
+        widgets={
+            'title':forms.TextInput(attrs={'class':'form-control','placeholder':'Title'}),
+            'title_tag':forms.TextInput(attrs={'class':'form-control', 'placeholder':'Title tag'}),
+            'author':forms.Select(attrs={'class':'form-control','placeholder':'username','id':'elder','value':''}),
+            'category':forms.Select(choices=choice_list,attrs={ 'class' : 'form-control'}),
+            'body':forms.Textarea(attrs={'class':'form-control', 'placeholder':'Content'}),
+            'snippet':forms.Textarea(attrs={'class':'form-control', 'placeholder':'Content'})
+        }
        
     
-        class Meta:
-            model = Post
-            fields = ('title','title_tag','author','category','body','snippet')
-
 class EditForm(forms.ModelForm):
     class Meta:
         model=Post
