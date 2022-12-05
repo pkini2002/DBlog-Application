@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
     {{post.title_tag}}
@@ -43,7 +44,11 @@ Post author : {{post.author.id}}
 <div class="card mb-3" style="max-width: 540px;">
     <div class="row g-0">
       <div class="col-md-4">
+        {% if post.author.profile.profile_pic %}
         <img src="{{post.author.profile.profile_pic.url}}" class="img-fluid rounded-start" alt="profile-pic">
+        {% else %}
+        <img src="{% static 'images/user-icon.webp' %}" width="200" height="200">
+        {% endif %}
       </div>
       <div class="col-md-8">
         <div class="card-body">
@@ -66,14 +71,12 @@ Post author : {{post.author.id}}
             {% if post.author.profile.instagram_url %}
             <a href="{{ post.author.profile.instagram_url }}">Instagram</a>
             {% endif %}
-            
+
           </small></p>
         </div>
       </div>
     </div>
   </div>
-
-<img src="{{post.author.profile.profile_pic.url}}" class="rounded-circle" width="150" height="200" alt="profile-pic">
 
 <hr><br/>
 {% endblock %}
