@@ -24,6 +24,72 @@
     padding: 10px 20px;
     background: #39ac31;
     margin: 20px 0;
-    display: inline-block;}
-	.contant_box_404{ margin-top:-50px;
+    display: inline-block;
+}
+
+	.contant_box_404{ 
+        margin-top:-50px;
+    }
+
+.heading{
+    margin-top: 20px;
+    background: #1e3c72;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2a5298, #1e3c72); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 200px;    
+}
+
+.heading-post{
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow-y: hidden;
+    padding-top: 30px;
+}
+
+.subtext{
+    color: #fff;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.inline{
+    display: flex;
+}
+
+.category{
+    padding-right:10px;
+    margin-right: 100px;
+}
+
+.pencil-icon{
+    margin-right: 50px;
+    color: #1e3c72;
+}
+
+.delete-icon{
+    color: #1e3c72;
+}
+
+.blog-container{
+    padding: 50px;
+}
+
+.post-title{
+    color: #1e3c72;
+}
+
+.post-author{
+    color: #1e3c72;
+    font-weight: 500;
+}
+
+.button-submit{
+    background-color: #1e3c72;
+    color: #fff;
 }
