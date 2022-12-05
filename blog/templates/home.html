@@ -36,10 +36,12 @@
         </span>
         </a>
 
-        {% if user.is_authenticated %}   
+        {% if user.is_authenticated %}  
+        {% if user.id == post.author.id %}
         <a href="{% url 'update_post' post.pk %}" class="pencil-icon"><i class="fa-solid fa-pencil"></i></a>
           <br/>
         <a href="{% url 'delete_post' post.pk %}" class="delete-icon"><i class="fa-solid fa-trash-arrow-up"></i></a> 
+        {% endif %}
         {% endif %}
         </span>
         <hr>
