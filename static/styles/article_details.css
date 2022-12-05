@@ -1,0 +1,57 @@
+body{
+    overflow-x: hidden;
+}
+
+.first-heading{
+     text-align: center;
+     color: #fff;
+}
+
+.inline{
+    display: flex;
+    position: relative;
+    left: 700px;
+}
+
+.post-author{
+    position: relative;
+    left: 500px;
+    top: 15px;
+    padding-bottom: 5px;
+}
+
+.pencil-icon,.delete-icon{
+    padding-right: 50px;
+    color: #fff;
+    position: relative;
+    bottom: 10px;
+}
+
+.category{
+    position: relative;
+    bottom: 40px;
+    left: 500px;
+}
+
+.sec{
+    background: #1e3c72;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2a5298, #1e3c72); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 200px;    
+    margin-top: 20px;
+    color: #fff;
+}
+
+.banner-img{
+    width: 100%;
+}
+
+.back-btn{
+    background-color: #1e3c72;
+    color: #fff;
+    border: #fff;
+    justify-content: center;
+    width: 20%;
+    position: relative;
+    left: 400px;
+}

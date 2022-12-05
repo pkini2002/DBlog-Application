@@ -5,47 +5,64 @@
     {{post.title_tag}}
 {% endblock %}
 
+{% block styles %}
+<!-- Replace {name} with the respective css file -->
+<link rel="stylesheet" href="{% static 'styles/article_details.css' %}" />
+{% endblock %}
+
 {% block content %}
 <div class="container">
+  <div class="sec">
     <br/>
-<h1>Posts</h1>
-{{post.title}} | {{post.title_tag}} | {{post.author.id}}
+<h1 class="first-heading">{{post.title}}</h1>
+<h4 class="first-heading"> {{post.title_tag}}</h4>
 
 <br>
-Current User : {{ user.id }}
-Post author : {{post.author.id}}
-<br>
+
 <small>
     {% if user.is_authenticated %}
     {% if user.id == post.author.id %}
-        -<a href="{% url 'update_post' post.pk %}">Edit</a>
-        <br/>
-        <a href="{% url 'delete_post' post.pk %}">Delete</a>
-        {% endif %}   
+    <span class="inline">
+        <a href="{% url 'update_post' post.pk %}" class="pencil-icon"><i class="fa-solid fa-pencil"></i></a>
+          <br/>
+        <a href="{% url 'delete_post' post.pk %}" class="delete-icon"><i class="fa-solid fa-trash-arrow-up"></i></a> 
+    </span>
+    {% endif %}  
     {% endif %}    
 </small>
-<strong>{{post.category}}</strong>
+<small class="post-author">-Posted by {{post.author}}</small>
+<br/> 
+<!-- Category -->
+<a href="{% url 'category' post.category %}">
+<span class="badge text-bg-primary category">
+  Category: 
+  {{post.category}}
+</span>
+</a>
+</div>
 <hr>
 
 {% if post.header_image  %}
-<img src="{{ post.header_image.url }}" width="400" height="500" alt="blog-img">
+<img src="{{ post.header_image.url }}" class="banner-img"  height="500" alt="blog-img">
 {% endif %}
 <br/><br/>
 
 {{ post.body|safe }}
 <br><br>
-<button class="btn btn-primary">
+<button class="back-btn rounded-5 p-2">
     <a href="{% url 'home' %}" style="text-decoration:none;color: white;">
         Back
     </a>
 </button>
 </div>
 
-<div class="card mb-3" style="max-width: 540px;">
+<br/><br/>
+<hr>
+<div class="card mb-3" style="max-width: 540px; position: relative;left: 300px;">
     <div class="row g-0">
       <div class="col-md-4">
         {% if post.author.profile.profile_pic %}
-        <img src="{{post.author.profile.profile_pic.url}}" class="img-fluid rounded-start" alt="profile-pic">
+        <img src="{{post.author.profile.profile_pic.url}}" class="img-fluid rounded" alt="profile-pic">
         {% else %}
         <img src="{% static 'images/user-icon.webp' %}" width="200" height="200">
         {% endif %}
