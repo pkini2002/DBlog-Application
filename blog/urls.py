@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from . views import HomeView,ArticleDetailView,AddPostView,UpdatePostView,DeletePostView,AddCategoryView,CategoryView,CategoryListView
+from . views import HomeView,ArticleDetailView,AddPostView,UpdatePostView,DeletePostView,AddCategoryView,CategoryView,CategoryListView,AddCommentView
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -14,6 +14,7 @@ urlpatterns = [
     path('article/<int:pk>/remove',DeletePostView.as_view(),name="delete_post"),
     path('category/<str:cats>/',CategoryView,name='category'),
     path('category-list/',CategoryListView,name='category-list'),
+    path('article/<int:pk>/comment/',AddCommentView.as_view(),name='add_comment'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
