@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %} 
+
+{% block styles %}
+<!-- Replace {name} with the respective css file -->
+<link rel="stylesheet" href="{% static 'styles/userprofile.css' %}" />
+{% endblock %}
+
+{% block content %}
+<h1>User Profile</h1>
+
+{{page_user}}
+<br/>
+
+{{page_user.bio}}
+<br/>
+<img src="{{ page_user.profile_pic.url }}" class="card-img" style="height:250px; width:150px;">
+<br/>
+<a href="{{ page_user.website_url }}">Website url</a>
+<a href="{{ page_user.twitter_url }}">Twitter url</a>
+<a href="{{ page_user.facebook_url }}">Website url</a>
+<a href="{{ page_user.instagram_url }}">Website url</a>
+{% endblock %}
