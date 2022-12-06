@@ -65,9 +65,24 @@
               <li class="nav-item">
                 <a class="nav-link" style="color:#fff;" href="{% url 'add_category' %}">Add category</a>
               </li>
+              {% else %}
+                 <li class="nav-item">
+                   <a class="nav-link" style="color:#fff;" href="{% url 'register' %}">Register</a>
+                 </li>
+                <li class="nav-item">
+                   <a class="nav-link" style="color:#fff;" href="{% url 'login' %}">Login</a>
+                </li>
+              {% endif %}
+              
+            </ul>
+
+            {% if user.is_authenticated %}
+            <!-- {% if user.profile.id %} -->
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"  style="color:#fff;">
-                  Profile
+                  {{ user.first_name }}
+                  {{ user.last_name }}
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="{% url 'edit_profile' %}">Edit Setting</a></li>
@@ -81,21 +96,15 @@
                   {% else %}
                   <li><a class="dropdown-item" href="{% url 'create_profile_page' %}">Create Profile Page</a></li>
                   {% endif %}
+
+              
+                    <a class="dropdown-item"  href="{% url 'logout' %}">Logout</a>
+              
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" style="color:#fff;" href="{% url 'logout' %}">Logout</a>
-              </li>
-              {% else %}
-                 <li class="nav-item">
-                   <a class="nav-link" style="color:#fff;" href="{% url 'register' %}">Register</a>
-                 </li>
-                <li class="nav-item">
-                   <a class="nav-link" style="color:#fff;" href="{% url 'login' %}">Login</a>
-                </li>
-              {% endif %}
-              
             </ul>
+            <!-- {% endif %} -->
+            {% endif %}
           </div>
         </div>
       </nav>
