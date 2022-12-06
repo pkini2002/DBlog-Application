@@ -56,6 +56,9 @@ class Comment(models.Model):
 
     def __str__(self):
         return '%s - %s' % (self.post.title,self.name)
+
+    def get_absolute_url(self):
+        return reverse('home')
     
 
 
