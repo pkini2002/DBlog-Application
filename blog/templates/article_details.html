@@ -55,6 +55,7 @@
 No Comments yet.. <a href="{% url 'add_comment' post.pk %}">Add Comment</a>
 {% else %}
 <br/>
+
 <a href="{% url 'add_comment' post.pk %}">Add Comment</a>
 <br/><br/><br/>
   {% for comment in post.comments.all %}
