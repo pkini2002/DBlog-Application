@@ -2,7 +2,7 @@
  {% block title %}Register{% endblock %} 
 {% block content %} 
 
-<h1>Register...</h1>
+<h1 style="text-align:center;color:#1e3c72;margin-top: 10px;">Register</h1>
 <br/><br/>
 
 <div class="container">
@@ -10,7 +10,8 @@
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p}}
-        <button class=""btn btn-secondary>Register</button>
+        <button class="btn btn-secondary">Register</button>
+        <br/><br/>
     </form>
 </div>
 </div>
