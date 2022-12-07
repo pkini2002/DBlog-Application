@@ -83,25 +83,25 @@ No Comments yet.. <a href="{% url 'add_comment' post.pk %}">Add Comment</a>
       <div class="col-md-8">
         <div class="card-body">
           <h5 class="card-title">
-            <a href="{% url 'show_profile_page' post.author.profile.id %}">Author Profile</a>
-            {{post.author.profile.user}}</h5>
+            <a href="{% url 'show_profile_page' post.author.profile.id %}" style="text-decoration:none;">{{post.author.profile.user}}</a>
+            </h5>
           <p class="card-text">{{post.author.profile.bio}}</p>
           <p class="card-text"><small class="text-muted">
 
             {% if post.author.profile.website_url %}
-            <a href="{{ post.author.profile.website_url }}">Website</a>
+            <a href="{{ post.author.profile.website_url }}"><i class="fa-brands fa-internet-explorer px-2 fa-2x"></i></a>
             {% endif %}
 
             {% if post.author.profile.facebook_url %}
-            <a href="{{ post.author.profile.facebook_url }}">Facebook</a>
+            <a href="{{ post.author.profile.facebook_url }}"><i class="fa-brands fa-facebook px-2 fa-2x"></i></a>
             {% endif %}
 
             {% if post.author.profile.twitter_url %}
-            <a href="{{ post.author.profile.twitter_url }}">Twitter</a>
+            <a href="{{ post.author.profile.twitter_url }}"><i class="fa-brands fa-twitter px-2 fa-2x"></i></a>
             {% endif %}
 
             {% if post.author.profile.instagram_url %}
-            <a href="{{ post.author.profile.instagram_url }}">Instagram</a>
+            <a href="{{ post.author.profile.instagram_url }}"><i class="fa-brands fa-instagram px-2 fa-2x"></i></a>
             {% endif %}
 
           </small></p>

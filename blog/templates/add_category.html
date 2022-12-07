@@ -1,17 +1,25 @@
 {% extends 'base.html' %}
+{% load static %} 
 
 {% block title %}
     Add a new Category
 {% endblock %}
 
+{% block styles %}
+<!-- Replace {name} with the respective css file -->
+<link rel="stylesheet" href="{% static 'styles/add_category.css' %}" />
+{% endblock %}
+
 {% block content %}
-<h1>Add Post</h1>
-<div class="container">
+<h1 class="heading">Add Category</h1>
+<br/>
+<div class="container form-add">
 <div class="form-group">
     <form method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-secondary">Add Category</button>
+        {{ form.as_p}}
+        <br/>
+        <button class="btn btn-secondary add-cat">Add Category</button>
     </form>
 </div>
 </div>

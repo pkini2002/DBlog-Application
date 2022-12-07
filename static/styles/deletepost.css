@@ -1,0 +1,25 @@
+.delete-title{
+    color: #4469ac;
+    text-align: center;
+}
+
+.warning-text{
+    /* text-align: center; */
+    padding-top: 5px;
+    position: relative; 
+    left: 450px;
+    color: #4469ac;
+}
+
+.delete-post{
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    left: 440px;
+}
+
+.text{
+    text-align: center;
+    padding-top: 3px;
+    color: #4469ac;
+}
