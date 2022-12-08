@@ -8,22 +8,23 @@
 
 {% block content %}
 
-<div class="container" style="margin-top:50px;position: relative; left: 280px;">
-<div class="card mb-3" style="max-width: 540px;">
+<div class="container shadow p-3 mb-5 bg-body rounded" style="height:60%;width:47%;position: absolute;left:27%;top:22%;text-align: center;color:#1e3c72;">
+<div class="card mb-3" style="width: 600px;position: relative;top: 15%;border: 0cm;">
     <div class="row g-0">
       <div class="col-md-4">
         <img src="{{ page_user.profile_pic.url }}" class="img-fluid rounded-start" alt="profile-pic">
       </div>
       <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">{{page_user}}</h5>
+        <div class="card-body " style="font-weight: 500;">
+          <h3 class="card-title" style="color:#1e3c72;">{{page_user}}</h3>
+          <br>
           <p class="card-text">{{page_user.bio}}</p>
           <hr>
-          <p class="card-text" style="position:relative; left:50px;"><small class="text-muted">
-            <a href="{{ page_user.website_url }}"><i class="fa-brands fa-internet-explorer px-2 fa-2x"></i></a>
-            <a href="{{ page_user.twitter_url }}"><i class="fa-brands fa-twitter px-2 fa-2x"></i></a>
-            <a href="{{ page_user.facebook_url }}"><i class="fa-brands fa-facebook px-2 fa-2x"></i></a>
-            <a href="{{ page_user.instagram_url }}"><i class="fa-brands fa-instagram px-2 fa-2x"></i></a>
+          <p class="card-text" ><small class="text-muted">
+            <a href="{{ page_user.website_url }}"><i class="fa-brands fa-internet-explorer px-2 fa-2x fa-bounce" style="color: #1e3c72;"></i></a>
+            <a href="{{ page_user.twitter_url }}"><i class="fa-brands fa-twitter px-2 fa-2x fa-bounce" style="color: #1e3c72;"></i></a>
+            <a href="{{ page_user.facebook_url }}"><i class="fa-brands fa-facebook px-2 fa-2x fa-bounce" style="color: #1e3c72;"></i></a>
+            <a href="{{ page_user.instagram_url }}"><i class="fa-brands fa-instagram px-2 fa-2x fa-bounce" style="color: #1e3c72;"></i></a>
           </small></p>
         </div>
       </div>
@@ -31,7 +32,7 @@
   </div>
 </div>
 
-<hr>
+
 <br/>
 
 {% endblock %}

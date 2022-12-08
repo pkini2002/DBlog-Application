@@ -14,16 +14,18 @@
 {% block content %}
 <br/><br/>
 <div class="container con shadow-lg" style="justify-content:center;">
-<h4 class="cat">Choose a category to filter the blogs!</h4>
+ <div style="position:relative;left:50px;">
+<h3 class="cat" style="font-weight: bolder;">Choose a category to filter the blogs!</h3>
     <br/>
 {% for item in cat_menu_list %}
 <div class="sec">
-<button type="button" class="btn btn-success" style="width:50%;">
+<button type="button" class="btn btn-block " style="width:50%; background: linear-gradient(to right,#373B44 ,#4286f4 );color: aliceblue;font-size: large; ">
     <a href="{% url 'category' item %}" class="dropdown-item">{{item}}</a>
 </button>
 </div>
 <br/>
+
 {% endfor %}
 </div>
-
+</div>
 {% endblock %}

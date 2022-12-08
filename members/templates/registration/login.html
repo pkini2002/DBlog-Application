@@ -2,16 +2,36 @@
 {% block title %}Login{% endblock %}
 {% block content %}
 
-<h1>Login...</h1>
-<br/><br/>
 
-<div class="container">
-<div class="form-group">
+
+<div class="form-group shadow p-3 mb-5 bg-body rounded " style="height:63%;width:30%;position: absolute;left:35%;top:22%;text-align: center;color:#1e3c72;">
     <form method="POST">
+    <br/>
         {% csrf_token %}
-        {{ form.as_p}}
-        <button class=""btn btn-secondary>Login</button>
-    </form>
+        <h1  style="text-align:center;color:#1e3c72;margin-top: 10px;font-weight: bolder;">Welcome User :)</h1>
+        <br><br>
+        <div class="form-group form-outline ">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+            <input type="text" class="form-control" name="username" placeholder="Username" >
+            </div>
+        </div>
+        <br>
+         <div class="form-group form-outline ">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock"></i></span>
+            <input type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+        </div>
+        <br>
+            <button type="submit" class="btn btn-primary btn-block" style="width:200px;
+            background: linear-gradient(to right,#373B44 ,#4286f4 ); 
+            " >Login</button>
+    
+          <br><br>
+       <strong> Not Registered? Sign Up <a href="{% url 'register' %}">Here...</a></strong>
+    </form> 
 </div>
-</div>
+
+
 {% endblock %}
