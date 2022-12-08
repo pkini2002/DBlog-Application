@@ -30,11 +30,18 @@
    pip install virtualenv
    ```
    **For Windows Users**
+   `Initially when you clone the project run` 
+
+   ```bash
+   virtualenv env
+   source env/Scripts/activate
+   ```
+
+   `For subsequent run of the project you can simply use`
    ```bash
    virtualenv env
    env/Scripts/activate
    ```
-
 
    **For Linux Users**
    ```bash
