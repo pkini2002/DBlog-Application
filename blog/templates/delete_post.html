@@ -13,16 +13,16 @@
 {% block content %}
 {% if user.is_authenticated %}
     <br/><br/>
-    <div class="card container p-lg-5">
-    <h3 class="delete-title">Delete: {{post.title}}</h3>
-    <div class="container">
-    <div class="form-group">
+    <div class="card container shadow p-3 mb-5 bg-body rounded" style="width: 65%;margin-top: 150px;">
+    <h3 class="delete-title"  style="text-align:center;color:#1e3c72; margin-top: 10px;font-weight: bolder">Delete: <span style="color:#DC3545;">{{post.title}}</span ></h3>
+    <div class="container"  >
+    <div class="form-group" style="text-align: center;">
         <form method="POST">
             {% csrf_token %}
-            <strong class="warning-text">Are you sure?</strong><br/>
-            <p class="text">This can't be undone!</p>
-            <br/>
-            <button class="btn btn-danger delete-post">Delete Post</button>
+            <br>
+            <strong class="warning-text" style="position: relative;left: 1%;" >Are you sure?</strong><br/>
+           <br>
+            <button class="btn btn-danger delete-post" style="width:200px;position: relative;left: 1%;">Delete Post</button>
         </form>
     </div>
     </div>

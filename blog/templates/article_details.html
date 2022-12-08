@@ -46,18 +46,20 @@
 <img src="{{ post.header_image.url }}" class="banner-img"  height="500" alt="blog-img">
 {% endif %}
 <br/><br/>
-
 {{ post.body|safe }}
+<br>
 <br><br>
-<h2>Comments: </h2>
+<div class="container shadow p-3 mb-5 bg-body rounded" style="text-align: center;">
+<h2 style="text-align:center;color:#1e3c72; margin-top: 10px;font-weight: bolder">Comments: </h2>
 
 {% if not post.comments.all %}
-No Comments yet.. <a href="{% url 'add_comment' post.pk %}">Add Comment</a>
+No Comments yet.. <a href="{% url 'add_comment' post.pk %}" >Add Comment</a>
 {% else %}
 <br/>
 
-<a href="{% url 'add_comment' post.pk %}">Add Comment</a>
+<a href="{% url 'add_comment' post.pk %}" >Add Comment</a>
 <br/><br/><br/>
+
   {% for comment in post.comments.all %}
      <strong>{{ comment.name }}-{{ comment.date_added }}</strong>
      <br/>
@@ -65,13 +67,14 @@ No Comments yet.. <a href="{% url 'add_comment' post.pk %}">Add Comment</a>
      <br/>
      <hr>
   {% endfor %}
+</div>
 {% endif %}
 
 </div>
 
-<br/><br/>
-<hr>
-<div class="card mb-3" style="max-width: 540px; position: relative;left: 300px;">
+<br/>
+
+<div class="card mb-3 shadow p-3 mb-5 bg-body rounded" style="max-width: 700px; position: relative;left: 22%;text-align: center;border: 0cm;">
     <div class="row g-0">
       <div class="col-md-4">
         {% if post.author.profile.profile_pic %}
@@ -81,27 +84,28 @@ No Comments yet.. <a href="{% url 'add_comment' post.pk %}">Add Comment</a>
         {% endif %}
       </div>
       <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">
-            <a href="{% url 'show_profile_page' post.author.profile.id %}" style="text-decoration:none;">{{post.author.profile.user}}</a>
-            </h5>
+        <div class="card-body" style="font-weight: 500;">
+          <h3 class="card-title" >
+            <a href="{% url 'show_profile_page' post.author.profile.id %}" style="text-decoration:none;color:#1e3c72;">{{post.author.profile.user}}</a>
+            </h3>
+            <br>
           <p class="card-text">{{post.author.profile.bio}}</p>
           <p class="card-text"><small class="text-muted">
-
+<br>
             {% if post.author.profile.website_url %}
-            <a href="{{ post.author.profile.website_url }}"><i class="fa-brands fa-internet-explorer px-2 fa-2x"></i></a>
+            <a href="{{ post.author.profile.website_url }}"><i class="fa-brands fa-internet-explorer px-2 fa-2x fa-bounce" style="color: #1e3c72;"></i></a>
             {% endif %}
 
             {% if post.author.profile.facebook_url %}
-            <a href="{{ post.author.profile.facebook_url }}"><i class="fa-brands fa-facebook px-2 fa-2x"></i></a>
+            <a href="{{ post.author.profile.facebook_url }}"><i class="fa-brands fa-facebook px-2 fa-2x fa-bounce" style="color: #1e3c72;"></i></a>
             {% endif %}
 
             {% if post.author.profile.twitter_url %}
-            <a href="{{ post.author.profile.twitter_url }}"><i class="fa-brands fa-twitter px-2 fa-2x"></i></a>
+            <a href="{{ post.author.profile.twitter_url }}"><i class="fa-brands fa-twitter px-2 fa-2x fa-bounce" style="color: #1e3c72;"></i></a>
             {% endif %}
 
             {% if post.author.profile.instagram_url %}
-            <a href="{{ post.author.profile.instagram_url }}"><i class="fa-brands fa-instagram px-2 fa-2x"></i></a>
+            <a href="{{ post.author.profile.instagram_url }}"><i class="fa-brands fa-instagram px-2 fa-2x fa-bounce" style="color: #1e3c72;"></i></a>
             {% endif %}
 
           </small></p>
@@ -110,5 +114,5 @@ No Comments yet.. <a href="{% url 'add_comment' post.pk %}">Add Comment</a>
     </div>
   </div>
 
-<hr><br/>
+<br/>
 {% endblock %}
