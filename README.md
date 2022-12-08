@@ -10,7 +10,8 @@
 
 ### ER Diagram
 
-![schema diagram](https://user-images.githubusercontent.com/84091455/206546976-07c4903a-4301-4fcb-ba95-a5243d2862e8.png)
+![ER-diagram](https://user-images.githubusercontent.com/84091455/206548715-d5fe1491-1ced-4f57-b572-30ef62d3c372.png)
+
 <br/>
 
 ### Installation
