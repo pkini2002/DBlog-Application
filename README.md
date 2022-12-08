@@ -8,6 +8,12 @@
 <a href="http://www.djangoproject.com/"><img src="https://www.djangoproject.com/m/img/badges/djangopowered126x54.gif" border="0" alt="Powered by Django." title="Powered by Django." /></a>
 </p>
 
+### ER Diagram
+
+![ER-diagram](https://user-images.githubusercontent.com/84091455/206548715-d5fe1491-1ced-4f57-b572-30ef62d3c372.png)
+
+<br/>
+
 ### Installation
 
 1. - Fork the [repo](https://github.com/pkini2002/DBlog-Application)
@@ -25,11 +31,18 @@
    pip install virtualenv
    ```
    **For Windows Users**
+   `Initially when you clone the project run` 
+
+   ```bash
+   virtualenv env
+   source env/Scripts/activate
+   ```
+
+   `For subsequent run of the project you can simply use`
    ```bash
    virtualenv env
    env/Scripts/activate
    ```
-
 
    **For Linux Users**
    ```bash
