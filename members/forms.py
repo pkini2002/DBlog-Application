@@ -72,3 +72,13 @@ class EditProfileNewForm(forms.ModelForm):
           'twitter_url':forms.TextInput(attrs={'class':'form-control'}),
           'instagram_url':forms.TextInput(attrs={'class':'form-control'}),
         }
+
+class LoginForm(forms.ModelForm):
+    class Meta:
+       model=User
+       fields = ('username','password')
+
+       widgets={
+          'username':forms.TextInput(attrs={'class':'form-control'}),
+          'password':forms.TextInput(attrs={'class':'form-control'}),
+        }

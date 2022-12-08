@@ -2,15 +2,18 @@
  {% block title %}Register{% endblock %} 
 {% block content %} 
 
-<h1 style="text-align:center;color:#1e3c72;margin-top: 10px;">Register</h1>
-<br/><br/>
 
-<div class="container">
-<div class="form-group">
+
+<div class="container shadow p-3 mb-5 bg-body rounded " style="width: 50%;margin-top: 30px;">
+    <h1 style="text-align:center;color:#1e3c72;margin-top: 10px;font-weight: bolder;">Create Account :)</h1>
+<div class="form-group " style="font-weight: 600;line-height: 2.5;">
     <form method="POST">
+        <br>
         {% csrf_token %}
         {{ form.as_p}}
-        <button class="btn btn-secondary">Register</button>
+        <br>
+        <button class="btn btn-primary btn-block" style="width:200px;position: relative;left:35%;
+        background: linear-gradient(to right,#373B44 ,#4286f4 );">Register</button>
         <br/><br/>
     </form>
 </div>

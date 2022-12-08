@@ -2,10 +2,11 @@ from django.shortcuts import render,get_object_or_404
 from django.views import generic
 from django.views.generic import DetailView,CreateView
 from django.contrib.auth.forms import  UserCreationForm, UserChangeForm, PasswordChangeForm
-from django.contrib.auth.views import PasswordChangeView
+from django.contrib.auth.views import PasswordChangeView, LoginView
 from django.urls import reverse_lazy
-from .forms import SignUpForm, EditProfileForm, PasswordChangingForm,ProfilePageForm,EditProfileNewForm
+from .forms import SignUpForm, EditProfileForm, PasswordChangingForm,ProfilePageForm,EditProfileNewForm, LoginForm
 from blog.models import Profile
+
 
 class CreateProfilePageView(CreateView):
     model = Profile
@@ -58,3 +59,8 @@ class UserEditView(generic.UpdateView):
 
     def get_object(self):
         return self.request.user
+
+class LoginUser(LoginView):
+    template_name = 'registration/login.html'  
+    form_class = LoginForm 
+    success_url=reverse_lazy('home')
