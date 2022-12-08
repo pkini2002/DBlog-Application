@@ -13,15 +13,18 @@
 {% block content %}
 {% if user.is_authenticated %}
 {% if user.id == post.author.id %}
-    <h1 style="text-align:center;color:#1e3c72; margin-top: 10px;">Update Post</h1>
+    
+    <div class="container shadow p-3 mb-5 bg-body rounded" style="width: 65%;margin-top: 30px;">
+        <h1 style="text-align:center;color:#1e3c72; margin-top: 10px;font-weight: bolder">Update Post</h1>
     <br/><br/>
-    <div class="container">
-    <div class="form-group">
+    <div class="form-group" style="font-weight: 600;line-height: 2.5;">
         <form method="POST">
             {% csrf_token %}
             {{ form.media }}
             {{ form.as_p }}
-            <button class="btn btn-secondary">Update</button>
+            <br>
+            <button class="btn btn-primary btn-block" style="width:200px;position: relative;left:40%;
+            background: linear-gradient(to right,#373B44 ,#4286f4 );">Update</button>
         </form>
     </div>
     <br/><br/>
