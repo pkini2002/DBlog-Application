@@ -49,11 +49,14 @@
             {{ post.body|slice:":500"|safe }}
         </section>
         <br/>
+        
         <button type="submit" class="button-submit rounded-5 p-2" style="border-color:#fff;">
             <a href="{% url 'article-detail' post.pk %}" style="color:#fff;text-decoration:none;">
                 Read More
             </a>
         </button>
+      
+        
  </div>
  <br><br><br>
 {% endfor %}
