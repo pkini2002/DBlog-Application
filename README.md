@@ -14,6 +14,25 @@
 
 <br/>
 
+### Pages
+
+- Home page
+- Article Detail page
+- Add Post Page
+- Add Category Page
+- Update Post
+- Delete Post
+- Add Comment page
+- Blogs filtered by category page
+- Category List Page
+- Register Page
+- Login Page
+- Edit Profile Page
+- Password Change page
+- Show Profile Page
+- Edit Profile Page
+- Create profile page
+
 ### Installation
 
 1. - Fork the [repo](https://github.com/pkini2002/DBlog-Application)
@@ -78,3 +97,17 @@
    ```bash
    python manage.py runserver
    ```
+   
+### Snapshots
+
+**Home Page**
+
+![Home](https://user-images.githubusercontent.com/84091455/208229840-188ab65e-853f-46b3-83d2-79e6860f4b02.png)
+
+**Article Detail Page**
+
+![article details](https://user-images.githubusercontent.com/84091455/208229849-3089dcc4-612b-4eeb-97db-fdf71eabda5d.png)
+
+**Blogs filtered by category page**
+
+![category filtering](https://user-images.githubusercontent.com/84091455/208229845-e517838e-8c9a-42b7-9827-c0dd9e4bacaf.png)
