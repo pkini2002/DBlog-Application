@@ -1,6 +1,10 @@
 # DBlog
 
 <p align="center">
+<img src="https://user-images.githubusercontent.com/84091455/208230679-761c3788-5f3e-443a-b9df-029f949d2422.png" height=150 />
+</p>
+
+<p align="center">
 <a href="https://www.python.org/"><img src="https://forthebadge.com/images/badges/made-with-python.svg" border="0" title="Made with Python" />
 </p>
 
